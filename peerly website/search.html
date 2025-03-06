@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Button</title>
+  <script>
+    function performSearch() {
+      var query = document.getElementById('searchInput').value;
+      if (query) {
+        alert("You searched for: " + query);
+        // You can add more code here to handle the search, like redirecting to a search results page
+        window.location.href = 'searchResults.html?q=' + encodeURIComponent(query); // Example of redirecting
+      } else {
+        alert("Please enter a search term.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>Search</h2>
+  <input type="text" id="searchInput" placeholder="Enter search term" />
+  <button type="button" onclick="performSearch()">Search</button>
+</body>
+</html>
